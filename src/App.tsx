@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Box, Text } from "@chakra-ui/react";
 import ProjectPage from "./pages/projects";
 import AboutPage from "./pages/about";
 import ProjectCard from "./components/projectCard";
@@ -10,21 +11,26 @@ function App() {
   return (
     <div>
       <AppBar />
-      <CircularImage src="../public/assets/selfie.jpg" alt="Nick Ledbetter" />
+      <CircularImage
+        src="../public/assets/selfie.jpg"
+        alt="Nick Ledbetter"
+        offsetY="-35px"
+      />
       <AboutPage />
-      <p>Professional Projects and Open Source </p>
+      <Box width="100%" height="40px" />
+      <Text fontSize="xl" fontWeight="bold">
+        Professional Projects and Open Source
+      </Text>
+      <Box width="100%" height="20px" />
       <ProjectCard
         title="American Veterinary Medical Association App"
-        description="This was my Senior Capstone Project at Oregon State University. I led the development of a mobile application for the American Veterinary Medical Association. This mobile app was part of a comprehensive solution including a full-stack web app, mobile app, and database developed by my team over the course of a year. The mobile app was built using Flutter, and I also contributed to the React/Node.js web app and PostgreSQL database."
+        description="This was my Senior Capstone Project at Oregon State University. I designed and led the development of a mobile application for the American Veterinary Medical Association. This was part of a comprehensive solution including a mobile app, full-stack web app, and database developed by my team over the course of a year. The mobile app was built using Flutter, and I also contributed to the React/Node.js web app and API as well as the PostgreSQL database."
       />
       <ProjectCard
         title="Flutter"
-        description="Flutter is my favorite programming language, and I am starting to contribute in my spare time."
+        description="I love the Flutter framework and Dart programming language, and I am starting to contribute in my spare time."
       />
-      <p>
-        ** Highlight AVMA Project, recently started contributing to Flutter in
-        free time
-      </p>
+
       <p>My Projects</p>
       <p>
         I love to create new things! Below you can find some of my favorite
@@ -32,7 +38,6 @@ function App() {
       </p>
       <ProjectPage />
       <p>
-        {" "}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id
         dui in purus cursus pellentesque ut quis velit. Aliquam aliquet felis
         quis turpis pharetra rhoncus. Aliquam nisi orci, condimentum vel

@@ -1,17 +1,58 @@
 import React from "react";
-import "../App.css";
+import { Box, Image } from "@chakra-ui/react";
 
 interface CircularImageProps {
   src: string;
   alt: string;
+  size?: string | number;
+  offsetX?: string | number;
+  offsetY?: string | number;
 }
 
-const CircularImage: React.FC<CircularImageProps> = ({ src, alt }) => {
+const CircularImage: React.FC<CircularImageProps> = ({
+  src,
+  alt,
+  size = "350px",
+  offsetX = "0",
+  offsetY = "0",
+}) => {
+  const objectPosition = `${offsetX} ${offsetY}`;
+
   return (
-    <div style={{ textAlign: "center" }}>
-      <img src={src} alt={alt} className="circular-image" />
-    </div>
+    <Box
+      width={size}
+      height={size}
+      overflow="hidden"
+      borderRadius="50%"
+      display="inline-block"
+    >
+      <Image
+        src={src}
+        alt={alt}
+        width="100%"
+        height="100%"
+        objectFit="cover"
+        objectPosition={objectPosition}
+      />
+    </Box>
   );
 };
 
 export default CircularImage;
+
+{
+}
+
+{
+  /* <Box
+        as="img"
+        src={src}
+        alt={alt}
+        width="100%"
+        height="100%"
+        objectFit="cover"
+        position="absolute"
+        top={offsetY}
+        left={offsetX}
+      /> */
+}
