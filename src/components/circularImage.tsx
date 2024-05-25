@@ -20,11 +20,15 @@ const CircularImage: React.FC<CircularImageProps> = ({
 
   return (
     <Box
+      id="about"
       width={size}
       height={size}
       overflow="hidden"
       borderRadius="50%"
       display="inline-block"
+      borderWidth="4px"
+      borderColor="gray.800"
+      _hover={{ borderColor: "green.500" }}
     >
       <Image
         src={src}

@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Link as RouterLink } from "react-router-dom";
+import ContactModal from "./contactModal";
 
 function AppBar() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -26,6 +27,24 @@ function AppBar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
+  }
 
   return (
     <Box
@@ -49,15 +68,25 @@ function AppBar() {
           Grokking Nick
         </Heading>
         <Flex align="center">
-          <Link as={RouterLink} to="#about" marginRight="4">
+          <Link
+            as={RouterLink}
+            to="#about"
+            onClick={scrollToTop}
+            marginRight="4"
+          >
             About
           </Link>
-          <Link as={RouterLink} to="#projects" marginRight="4">
+          <Link
+            as={RouterLink}
+            to="#projects"
+            onClick={scrollToProjects}
+            marginRight="4"
+          >
             Projects
           </Link>
-          <Link as={RouterLink} to="/contact">
-            Contact Me
-          </Link>
+
+          <ContactModal />
+
           <Button onClick={toggleColorMode} marginLeft="4">
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>

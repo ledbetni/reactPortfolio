@@ -12,7 +12,7 @@ function App() {
     <div>
       <AppBar />
       <CircularImage
-        src="../public/assets/selfie.jpg"
+        src="../assets/selfie.jpg"
         alt="Nick Ledbetter"
         offsetY="-35px"
       />
@@ -26,18 +26,57 @@ function App() {
         title="American Veterinary Medical Association App"
         description="This was my Senior Capstone Project at Oregon State University. I designed and led the development of a mobile application for the American Veterinary Medical Association. This was part of a comprehensive solution including a mobile app, full-stack web app, and database developed by my team over the course of a year. The mobile app was built using Flutter, and I also contributed to the React/Node.js web app and API as well as the PostgreSQL database."
       />
+      <Box width="100%" height="20px" />
       <ProjectCard
         title="Flutter"
         description="I love the Flutter framework and Dart programming language, and I am starting to contribute in my spare time."
       />
+      <Box width="100%" height="100px" id="projects" />
 
-      <p>My Projects</p>
-      <p>
+      <Text fontSize="xl" fontWeight="bold">
+        My Projects
+      </Text>
+      <Box width="100%" height="10px" />
+      <Text fontSize="lg" fontWeight="bold">
         I love to create new things! Below you can find some of my favorite
-        projects so far
-      </p>
+        projects so far. I am always working on something new, so check back
+        soon!
+      </Text>
+      <Box width="100%" height="10px" />
       <ProjectPage />
-      <p>
+    </div>
+  );
+}
+
+export default App;
+
+// return (
+//   <>
+//     <div>
+//       <a href="https://vitejs.dev" target="_blank">
+//         <img src={viteLogo} className="logo" alt="Vite logo" />
+//       </a>
+//       <a href="https://react.dev" target="_blank">
+//         <img src={reactLogo} className="logo react" alt="React logo" />
+//       </a>
+//     </div>
+//     <h1>Vite + React</h1>
+//     <div className="card">
+//       <button onClick={() => setCount((count) => count + 1)}>
+//         count is {count}
+//       </button>
+//       <p>
+//         Edit <code>src/App.tsx</code> and save to test HMR
+//       </p>
+//     </div>
+//     <p className="read-the-docs">
+//       Click on the Vite and React logos to learn more
+//     </p>
+//   </>
+// )
+
+{
+  /* <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id
         dui in purus cursus pellentesque ut quis velit. Aliquam aliquet felis
         quis turpis pharetra rhoncus. Aliquam nisi orci, condimentum vel
@@ -120,34 +159,5 @@ function App() {
         mollis tellus. Vivamus lacinia erat eget porttitor pretium. Aenean a
         condimentum eros, nec suscipit nisi. Nullam et dui tellus. Cras faucibus
         tristique lorem a euismod.{" "}
-      </p>
-    </div>
-  );
+      </p> */
 }
-
-export default App;
-
-// return (
-//   <>
-//     <div>
-//       <a href="https://vitejs.dev" target="_blank">
-//         <img src={viteLogo} className="logo" alt="Vite logo" />
-//       </a>
-//       <a href="https://react.dev" target="_blank">
-//         <img src={reactLogo} className="logo react" alt="React logo" />
-//       </a>
-//     </div>
-//     <h1>Vite + React</h1>
-//     <div className="card">
-//       <button onClick={() => setCount((count) => count + 1)}>
-//         count is {count}
-//       </button>
-//       <p>
-//         Edit <code>src/App.tsx</code> and save to test HMR
-//       </p>
-//     </div>
-//     <p className="read-the-docs">
-//       Click on the Vite and React logos to learn more
-//     </p>
-//   </>
-// )

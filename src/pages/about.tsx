@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <div id="about" className="aboutMe">
+    <div className="aboutMe">
       <p>
         Hello, I'm Nick Ledbetter. I'm a new graduate software engineer with a
         passion for developing mobile applications and researching machine
