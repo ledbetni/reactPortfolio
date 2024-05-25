@@ -17,9 +17,14 @@ function App() {
         alt="Nick Ledbetter"
         offsetY="-35px"
       />
+      <Box width="100%" height="20px" />
+      <Text fontSize="xl" fontWeight="bold" _hover={{ color: "green.500" }}>
+        Hello, I'm Nick Ledbetter.
+      </Text>
+
       <AboutPage />
       <Box width="100%" height="40px" />
-      <Text fontSize="xl" fontWeight="bold">
+      <Text fontSize="xl" fontWeight="bold" _hover={{ color: "green.500" }}>
         Professional Projects and Open Source
       </Text>
       <Box width="100%" height="20px" />
@@ -34,7 +39,7 @@ function App() {
       />
       <Box width="100%" height="100px" id="projects" />
 
-      <Text fontSize="xl" fontWeight="bold">
+      <Text fontSize="xl" fontWeight="bold" _hover={{ color: "green.500" }}>
         My Projects
       </Text>
       <Box width="100%" height="10px" />
