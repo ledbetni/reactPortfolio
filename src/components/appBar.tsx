@@ -43,7 +43,7 @@ function AppBar() {
   };
 
   function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scrolling
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   return (
@@ -83,6 +83,16 @@ function AppBar() {
             marginRight="4"
           >
             Projects
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/nicholas-ledbetter-b59073241/"
+            isExternal
+            marginRight="4"
+          >
+            LinkedIn
+          </Link>
+          <Link href="https://github.com/ledbetni" isExternal marginRight="4">
+            GitHub
           </Link>
 
           <ContactModal />
