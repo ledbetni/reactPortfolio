@@ -25,13 +25,13 @@ const ProjectPage = () => {
       <Box width="100%" height="20px" />
       <ProjectCard
         title="Google Cloud Platform Shipping API"
-        description="This is a RESTful API that allows users to create, read, update, and delete shipping information using Google Cloud Platform services. It was built using Node.js and tested using Postman. I wrote a technical specification detailing all of the endpoints and expected responses, which can be found in the README contained in the Github repo."
+        description="This is a RESTful API that allows users to create, read, update, and delete shipping information using Google Cloud Platform services. It was built using Node.js and Google Datastore, and tested using Postman. I wrote a technical specification detailing all of the endpoints and expected responses, which can be found in the README contained in the Github repo."
         githubLink="https://github.com/ledbetni/Google-App-Engine-Portfolio"
       />
       <Box width="100%" height="20px" />
       <ProjectCard
         title="React eCommerce App"
-        description="This is a full-stack eCommerce application built with React, Node.js, Express, and MySQL."
+        description="This is a full-stack eCommerce application built with React, Node.js, and MySQL."
         githubLink="https://github.com/ledbetni/react_mySQLEcommerce"
       />
       <Box width="100%" height="20px" />
