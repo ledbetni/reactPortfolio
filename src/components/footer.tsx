@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Box,
   Container,
@@ -6,17 +6,12 @@ import {
   Link,
   Stack,
   HStack,
-  Flex,
-  Heading,
-  useColorMode,
   useColorModeValue,
-  Button,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Link as RouterLink } from "react-router-dom";
 import ContactModal from "./contactModal";
 function Footer() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded] = useState(false);
   const bgColor = useColorModeValue("white", "gray.800");
   const expandedBgColor = useColorModeValue("white", "gray.800");
   const textColor = useColorModeValue("gray.800", "white");

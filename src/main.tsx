@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.tsx";
 import AboutPage from "./pages/about.tsx";
 import ProjectPage from "./pages/projects.tsx";
-import Layout from "./components/layout.tsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
