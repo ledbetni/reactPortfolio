@@ -64,6 +64,30 @@ function ContactModal() {
     }
   };
 
+  const verifyMessage = (values: {
+    name: string;
+    email: string;
+    message: string;
+  }) => {
+    const errors: { name?: string; email?: string; message?: string } = {};
+
+    if (!values.name) {
+      errors.name = "Name is required";
+    }
+
+    if (!values.email) {
+      errors.email = "Email is required";
+    } else if (!/^\S+@\S+\.\S+$/.test(values.email)) {
+      errors.email = "Invalid email address";
+    }
+
+    if (!values.message) {
+      errors.message = "Message is required";
+    }
+
+    return errors;
+  };
+
   return (
     <>
       <Link onClick={onOpen}>Contact Me</Link>
@@ -74,7 +98,11 @@ function ContactModal() {
           <ModalHeader>Contact Me</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+            <Formik
+              initialValues={initialValues}
+              validate={verifyMessage}
+              onSubmit={handleSubmit}
+            >
               <Form>
                 <Field name="name">
                   {({ field }: { field: any }) => (
