@@ -5,16 +5,16 @@ const ProjectPage = () => {
   return (
     <div>
       <ProjectCard
+        title="Statbot"
+        description="Statbot is a full-stack web application featuring a Flask backend and React frontend which aggregates and reports weekly NFL player statistics, with an integrated Python-based Discord bot that provides real-time statistical insights directly within Discord."
+        viewLink="https://www.statbot.dev/"
+      />
+      <ProjectCard
         title="SafetyNet"
         description="SafetyNet is a mobile application that allows users to quickly send their location and a pre-crafted message to emergency contacts in the event of an emergency. I made this using Flutter, Firebase, Firestore, and Google Maps API."
         githubLink="https://github.com/ledbetni/SafetyNet"
       />
       <Box width="100%" height="20px" />
-      <ProjectCard
-        title="Statbot"
-        description="Statbot is a Discord bot that provides NFL statistics to users. I am currently working on integrating machine learning to predict fantasy football player outcomes. Statbot was built using Python, with pandas dataframes for optimizing a large NFL dataset."
-        githubLink="https://github.com/ledbetni/StatBot"
-      />
       <Box width="100%" height="20px" />
       <ProjectCard
         title="Grokking Nick"

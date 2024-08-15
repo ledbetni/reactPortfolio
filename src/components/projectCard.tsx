@@ -5,12 +5,14 @@ interface ProjectCardProps {
   title: string;
   description: string;
   githubLink?: string;
+  viewLink?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   githubLink,
+  viewLink,
 }) => {
   return (
     <Box
@@ -35,6 +37,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           _hover={{ textDecor: "underline" }}
         >
           View on Github
+        </Link>
+      )}
+      {viewLink && (
+        <Link
+          href={viewLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          mt="2"
+          color="blue.500"
+          _hover={{ textDecor: "underline" }}
+          ml={githubLink ? "10px" : "0"} // Add some margin if both links are present
+        >
+          View {title}
         </Link>
       )}
     </Box>
